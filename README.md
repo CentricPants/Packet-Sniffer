@@ -1,67 +1,38 @@
-```
-Packet Sniffer – Kali Linux GUI Tool
-------------------------------------
+# Packet Sniffer – Kali Linux GUI Tool
 
-This is a simple GUI-based Packet Sniffer built with Python, Tkinter, and Scapy.  
-It allows users to select a network interface, filter packets by protocol (ARP, DNS, TCP, UDP, Wireless),  
-and view captured packet summaries in real time.
+This is a GUI-based Packet Sniffer built using **Python**, **Tkinter**, and **Scapy**.  
+It allows real-time network traffic capture, supports protocol filtering, and logs the captured data for analysis.
 
-This was a personal learning project created from scratch — a beginner-friendly tool for network analysis.
+This was developed as a personal project to explore how packet sniffing works and to gain hands-on experience with low-level networking.
 
-------------------------------------
-Features
-------------------------------------
+---
 
-- GUI interface using Tkinter
+## Features
+
+- Simple GUI using Tkinter
 - Real-time packet sniffing
-- Protocol filtering (ARP, DNS, TCP, UDP, Wireless Management)
-- Displays Ethernet, IP, and transport-layer headers
-- Captures wireless management frames (Beacon, Probe Requests)
-- Logs output to 'packet_log.txt'
-- Designed for Kali Linux (or any OS with root access)
+- Protocol filtering:
+  - ARP
+  - DNS
+  - TCP
+  - UDP
+  - Wireless Management Frames (Beacon, Probe Requests)
+- Captures and logs:
+  - Ethernet headers
+  - IP headers
+  - Transport layer ports
+  - Wireless broadcast and probe frames
+- Saves captured packet summaries to a `packet_log.txt` file
 
-------------------------------------
-How to Run
-------------------------------------
+---
 
-1. Install Python 3
-2. Install dependencies:
+## How to Run
+
+1. Ensure you have Python 3 installed
+2. Install required dependencies:
+   ```bash
    pip install scapy
-3. Run with root privileges:
+
+Run the script with root privileges:
+   ```bash
    sudo python3 packet_sniffer_gui.py
-4. Select a network interface from the dropdown
-5. Choose an optional protocol filter
-6. Click 'Start Sniffing' to begin, 'Stop Sniffing' to stop
-
-------------------------------------
-Requirements
-------------------------------------
-
-- Python 3.x
-- Scapy
-- Root privileges
-- Linux OS (tested on Kali Linux)
-
-------------------------------------
-File Structure
-------------------------------------
-
-packet_sniffer_gui.py     # Main GUI script  
-packet_log.txt            # Log file generated during sniffing
-
-------------------------------------
-Important Notes
-------------------------------------
-
-- This tool is for educational use only.
-- Use it only on networks you are authorized to monitor.
-- Wireless packet capture depends on adapter compatibility (monitor mode support).
-- No packet decryption is performed.
-
-------------------------------------
-Acknowledgement
-------------------------------------
-
-Built as a hands-on project to understand network traffic and packet-level analysis.
-
-```
