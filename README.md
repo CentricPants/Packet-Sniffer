@@ -35,4 +35,4 @@ This was developed as a personal project to explore how packet sniffing works an
 
 Run the script with root privileges:
    ```bash
-   sudo python3 packet_sniffer_gui.py
+   sudo python3 Packet_Sniffer.py
